@@ -53,3 +53,7 @@ a:active {
 i {
   color: grey;
 }
+
+img {
+  margin-top: 10px;
+}

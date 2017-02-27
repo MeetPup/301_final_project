@@ -17,10 +17,10 @@
   .icon-menu3 {
     display: none;
   }
-  nav ul {
+  .nav ul {
     display: block;
   }
-  nav li {
+  .nav li {
     display: inline-block;;
   }
 
