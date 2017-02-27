@@ -1,0 +1,34 @@
+{
+  "name": "301_final_project",
+  "version": "1.0.0",
+  "description": "App to connect pet-lovers with local Seattle events",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeetPup/301_final_project.git"
+  },
+  "keywords": [
+    "meetpup",
+    "meetup",
+    "google",
+    "maps",
+    "api",
+    "301",
+    "final",
+    "project"
+  ],
+  "author": "Abigail White, Kaylee Alvarado, David Teddy, Robert Hatfield",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MeetPup/301_final_project/issues"
+  },
+  "homepage": "https://github.com/MeetPup/301_final_project#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "page": "^1.7.1"
+  }
+}
