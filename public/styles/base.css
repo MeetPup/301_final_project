@@ -6,7 +6,8 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-  background-color: blue;
+  font-family: 'Open Sans Condensed';
+  background-color: white;
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
@@ -20,7 +21,6 @@ hr {
 }
 
 h1 {
-  font-family: 'Megrim';
   color: #F2473F;
 }
 
