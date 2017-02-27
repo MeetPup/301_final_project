@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/vendor/styles/normalize.css">
     <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/module.css">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
     <script id="event-template" type="text/x-handlebars-template">
@@ -17,10 +20,13 @@
 
   <body>
     <header>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#results">Results</a>
-        <a href="#about">About</a>
+      <nav class="nav">
+        <span class="icon-menu3"></span>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
       </nav>
 
       <!-- logo image -->

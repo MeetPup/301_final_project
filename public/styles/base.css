@@ -37,20 +37,13 @@ p {
   font-size: 1em;
 }
 
-address {
-  display: inline-block;
-}
-
 a, a:link {
   text-decoration: none;
-  color: #777;
-}
-a:hover{
-  text-decoration: line-through;
+  color: #blue;
 }
 
 a:hover{
-  color: #FA8072;
+  color: red;
 }
 
 a:active {
