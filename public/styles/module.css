@@ -1,6 +1,7 @@
 .icon-menu3 {
   font-size: 2.5em;
   margin: 1%;
+  display: block;
 }
 
 .nav ul {
@@ -28,11 +29,5 @@
     width: 900px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  footer {
-    height: 50px;
-    margin-top: 500px;
-    margin-bottom: 0px;
   }
 }
