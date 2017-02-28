@@ -50,6 +50,11 @@ a:active {
   font-weight: bold;
 }
 
+a:visited {
+  color: #660000;
+
+}
+
 i {
   color: grey;
 }
