@@ -14,12 +14,12 @@ app.get('/results', (request, response) => response.sendFile('/index.html', {roo
 app.get('*', (request, response) => response.sendFile('/index.html', {root: './public'}));
 
 //Route to utilize our middleman proxy
-// app.get('?', proxy)
+// app.get('/meetup/*', proxy)
 
 // function proxyMeetup(request, response) {
 //   console.log('Routing Meetup request for ', request.params[0]);
 //   (requestProxy({
-//     url: `?`,
+//     url: `https://api.meetup.com/${request.params[0]}`,
 //     headers: {Authorization: `token ${process.env.MEETUP_TOKEN}`} //'Authorization' might differ depending on what Meetup/GM expects
 //   }))(request, response);
 // }

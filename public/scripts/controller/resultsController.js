@@ -9,5 +9,11 @@ resultsController.init = function() {
   $('#results').show();
 }
 
+resultsController.setZipCode = function() {
+  let userZip = $('#homeInput').val();
+  return userZip;
+  results.getEvents(userZip);
+}
+
 module.resultsController = resultsController;
 })(window);
