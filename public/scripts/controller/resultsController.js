@@ -1,3 +1,13 @@
-'use strict'
+'use strict';
 
-console.log('results controller');
+(function(module) {
+
+const resultsController = {};
+
+resultsController.init = function() {
+  $('.tab-content').hide();
+  $('#results').show();
+}
+
+module.resultsController = resultsController;
+})(window);
