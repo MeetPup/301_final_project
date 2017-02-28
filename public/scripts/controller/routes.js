@@ -7,4 +7,3 @@ page('/about', aboutController.init);
 page('/results', resultsController.init);
 
 page();
-
