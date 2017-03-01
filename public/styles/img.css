@@ -5,3 +5,8 @@ img {
 .logo-paw {
   display: block;
 }
+
+#map {
+  width: 600px;
+  height: 400px;
+}
