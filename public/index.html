@@ -17,6 +17,13 @@
     <p>{{link}}</p>
     <p>Category: {{category}}</p>
   </script>
+
+  <style>
+  #map {
+   height: 400px;
+   width: 100%;
+  }
+    </style>
 </head>
   <body>
     <div class="content">
@@ -51,8 +58,9 @@
         <input class="input" type="numbers" name="zip-code" />
         <button id="resultsSubmitButton" type="submit">Fetch!</button>
       </form>
-      <p id="message"></p>
-      <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAioms9LDyfCohvTY_yx62j2O2q0WhqFCw&center=47.618217,-122.3540207&zoom=10" width="600" height="450" frameborder="0" style="border=0"></iframe>
+<p id="message"></p>
+
+      <div id="map"><p>Google Map Div</p></div>
     </section>
 
     <section id="about" class="tab-content">
@@ -122,13 +130,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
   <script src="/vendor/scripts/page.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPM0MjFCROm6alfbME3NmOwuXIHev6WVM"></script>
 
   <script src="/scripts/model/results.js"></script>
 
   <script src="/scripts/view/aboutView.js"></script>
   <script src="/scripts/view/homeView.js"></script>
   <script src="/scripts/view/resultsView.js"></script>
-
+    <!-- &callback=initMap -->
 
   <script src="/scripts/controller/aboutController.js"></script>
   <script src="/scripts/controller/homeController.js"></script>

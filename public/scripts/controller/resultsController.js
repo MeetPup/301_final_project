@@ -12,7 +12,7 @@ resultsController.init = function() {
 resultsController.setZipCode = function() {
   let userZip = $('#homeInput').val();
   // return userZip;
-  results.getEvents(userZip);
+  results.getEvents(userZip, initMap);
 }
 
 module.resultsController = resultsController;
