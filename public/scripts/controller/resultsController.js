@@ -12,8 +12,23 @@ resultsController.init = function() {
 
 resultsController.setZipCode = function() {
   let userZip = $('#zipInput').val();
-  // return userZip;
-  results.getEvents(userZip, listResults, initMap);
+  // Validate ZIP code entered
+  let regZip = /^\d{5}$/;
+  zipTest(userZip)
+  function zipTest(zip) {
+    let testValue = regZip.test(zip);
+    console.log(testValue);
+    if (testValue) {
+      // Valid ZIP, request events & load results view
+      results.getEvents(userZip, listResults, initMap);
+      resultsController.init();
+    } else {
+      //TODO: make a more user friendly response
+      alert('Please enter a valid 5 digit ZIP code.');
+      $('#zipInput').val('');
+    }
+}
+
 }
 
 module.resultsController = resultsController;
