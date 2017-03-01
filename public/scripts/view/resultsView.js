@@ -12,9 +12,12 @@
   })
 
   $('#form-results > button').on('click', function() {
-    $('#message').text(`We found ${results.all.length} results in your area.`);
     resultsController.setZipCode();
   })
+
+  function listResults(){
+    $('#message').text(`We found ${results.all.length} results in your area!`)
+  }
 
   function initMap() {
     let bounds = new google.maps.LatLngBounds();
@@ -201,5 +204,6 @@
 
 module.resultsView = resultsView;
 module.initMap = initMap;
+module.listResults = listResults;
 
 })(window);
