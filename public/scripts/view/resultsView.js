@@ -190,10 +190,10 @@
         console.log('inside addlistener', marker);
       });
 
-      let boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(14);
-        google.maps.event.removeListener(boundsListener);
-      });
+      // let boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        // this.setZoom(10);
+      //   google.maps.event.removeListener(boundsListener);
+      // });
     });
 
     map.fitBounds(bounds);
