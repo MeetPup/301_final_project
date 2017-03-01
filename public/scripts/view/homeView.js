@@ -14,7 +14,7 @@ console.log('homeView');
   })
 
   $('#form-home > button').on('click', function() {
-    console.log($('#homeInput').val());
+    console.log($('#zipInput').val());
     resultsController.setZipCode();
   })
 
