@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/module.css">
+  <link rel="stylesheet" href="/styles/img.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
   <script id="event-template" type="text/x-handlebars-template">
@@ -28,8 +29,9 @@
     <div class="content">
     <header>
       <nav class="nav">
-        <span class="icon-menu3"></span>
+
         <img id="logoImage" src="/images/logo/Logo-large.png"/>
+        <span class="icon-menu3"></span>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/results">Results</a></li>
@@ -39,7 +41,7 @@
     </header>
     <section id="home" class="tab-content">
       <h2>Welcome to MeetPup!</h2>
-      <p>Have you ever wondered what local pup groups are out there? We've got the answer! Enter your zip code below to check out what dog meetups are in your community.</p>
+      <p id="description">Have you ever wondered what local pup groups are out there? We've got the answer! Enter your zip code below to check out what dog meetups are in your community.</p>
     </section>
 
       <form id="form-home">
@@ -47,10 +49,11 @@
         <input id="zipInput" type="numbers" name="postal-code" />
         <button id="homeSubmitButton" type="submit">Fetch!</button>
       </form>
-    </section>
+
     <section id="results" class="tab-content">
       <h2>Results</h2>
       <p id="message"></p>
+
 
       <div id="map"><p>Google Map Div</p></div>
     </section>
@@ -112,9 +115,14 @@
       </div>
     </section>
   </div>
+
+  <!-- <img src="/images/dog-image.jpg" id="dog-image"/> -->
+
   <footer class="footer">
+    <!-- <img src="/images/logo/Logo-paw.png" class="logo-small"/> -->
+    <img id="bone" src="/images/bone.gif"/>
     <p>&copy; 2017 What'sPup! Group</p>
-    <img src="/images/logo/Logo-paw.png" class="logo-small"/>
+
   </footer>
 
   <!-- script tags  -->
