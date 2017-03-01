@@ -56,7 +56,6 @@
   }
 
   footer {
-    padding-top: 250px;
     margin: 0 auto;
   }
 
@@ -79,7 +78,7 @@
 
   .twoByTwo > div {
     float: left;
-    height: 400px;
+    height: 600px;
     width: 300px;
     padding: 50px;
   }
