@@ -44,6 +44,8 @@
       <p id="description">Have you ever wondered what local pup groups are out there? We've got the answer! Enter your zip code below to check out what dog meetups are in your community.</p>
     </section>
 
+    <h2 id="results-title">Results</h2>
+
       <form id="form-home">
         <h3 class="zipH3">Please Enter Zip Code:</h3>
         <input id="zipInput" type="numbers" name="postal-code" />
@@ -51,11 +53,11 @@
       </form>
 
     <section id="results" class="tab-content">
-      <h2>Results</h2>
+      <!-- <h2>Results</h2> -->
       <p id="message"></p>
 
 
-      <div id="map"><p>Google Map Div</p></div>
+      <div id="map"></div>
     </section>
     <section id="about" class="tab-content">
       <h2>About The Developers</h2>
@@ -116,10 +118,7 @@
     </section>
   </div>
 
-  <!-- <img src="/images/dog-image.jpg" id="dog-image"/> -->
-
   <footer class="footer">
-    <!-- <img src="/images/logo/Logo-paw.png" class="logo-small"/> -->
     <img id="bone" src="/images/bone.gif"/>
     <p>&copy; 2017 What'sPup! Group</p>
 
@@ -140,8 +139,6 @@
   <script src="/scripts/view/resultsView.js"></script>
 
   <!-- controllers -->
-
-    <!-- &callback=initMap -->
   <script src="/scripts/controller/aboutController.js"></script>
   <script src="/scripts/controller/homeController.js"></script>
   <script src="/scripts/controller/resultsController.js"></script>

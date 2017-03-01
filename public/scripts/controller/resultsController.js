@@ -8,6 +8,7 @@ resultsController.init = function() {
   $('.tab-content').hide();
   $('#form-home').show();
   $('#results').show();
+  $('#results-title').show();
 }
 
 resultsController.setZipCode = function() {
