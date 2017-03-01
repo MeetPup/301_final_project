@@ -4,6 +4,10 @@
   display: block;
 }
 
+#logoImage {
+  margin: 15px;
+}
+
 .nav ul {
   display: none;
   list-style:none;
