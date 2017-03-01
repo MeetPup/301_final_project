@@ -8,6 +8,7 @@ homeController.init = function() {
   $('.tab-content').hide();
   $('#home').show();
   $('#form-home').show();
+  $('#dog-image').show();
 }
 
 module.homeController = homeController;

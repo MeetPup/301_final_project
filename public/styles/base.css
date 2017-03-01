@@ -1,11 +1,27 @@
 html {
   height: 100%;
 }
+
 img {
   max-width: 100%;
 }
 
+button {
+  border-radius: 7px;
+  background-color: #4F4F4F;
+  font-family: 'Open Sans Condensed';
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: none;
+  margin: 3px;
+
+}
+
 body {
+  background-image: url('images/paw-background.jpg');
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
@@ -38,11 +54,6 @@ h2 {
   margin: 10px;
 }
 
-button {
-  margin-left: 5px;
-  font-size: 15px;
-}
-
 ul {
   list-style:none;
   padding-left: 0px;
@@ -61,11 +72,11 @@ p {
 
 a, a:link {
   text-decoration: none;
-  color: #blue;
+  color: 	#A02422;
 }
 
-a:hover{
-  color: red;
+a:hover {
+  color: blue;
 }
 
 a:active {
@@ -73,7 +84,7 @@ a:active {
 }
 
 a:visited {
-  color: #660000;
+  color: 	#A02422;
 
 }
 
@@ -83,4 +94,5 @@ i {
 
 footer {
   margin: 10px auto;
+  font-size: 10px;
 }

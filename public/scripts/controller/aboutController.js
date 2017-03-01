@@ -6,6 +6,8 @@ const aboutController = {};
 
 aboutController.init = function() {
   $('.tab-content').hide();
+  $('#form-home').hide();
+  $('#dog-image').show();
   $('#about').show();
 }
 

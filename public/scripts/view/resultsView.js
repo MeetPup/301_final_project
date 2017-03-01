@@ -16,7 +16,7 @@
   })
 
   function listResults(){
-    $('#message').text(`We found ${results.all.length} results in your area!`)
+    $('#message').text(`We found ${results.all.length} events in your area!`)
   }
 
   function initMap() {

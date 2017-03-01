@@ -4,6 +4,23 @@
   display: block;
 }
 
+#description {
+  background-color:	#A02422;
+  padding: 11px;
+  color: white;
+  border-radius: 7px;
+}
+
+#form-home {
+  border: 2px solid #A02422;
+  border-radius: 7px;
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EEE9E9;
+  cursor: pointer;
+}
+
 #logoImage {
   margin: 15px;
 }
