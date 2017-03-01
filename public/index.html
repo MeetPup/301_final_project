@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>MeetPup</title>
-    <link rel="icon" type="image/png" href="/images/logo/Logo-paw.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/vendor/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/module.css">
+<head>
+  <meta charset="utf-8">
+  <title>MeetPup</title>
+  <link rel="icon" type="image/png" href="/images/logo/Logo-paw.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/vendor/styles/normalize.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/module.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
-    <script id="event-template" type="text/x-handlebars-template">
-      <h1>{{name}}</h1>
-      <p>{{link}}</p>
-      <p>Category: {{category}}</p>
-    </script>
-  </head>
-
+  <script id="event-template" type="text/x-handlebars-template">
+    <h1>{{name}}</h1>
+    <p>{{link}}</p>
+    <p>Category: {{category}}</p>
+  </script>
+</head>
   <body>
+    <div class="content">
     <header>
       <nav class="nav">
         <span class="icon-menu3"></span>
@@ -32,7 +32,7 @@
       </nav>
 
       <!-- logo image -->
-  </header>
+    </header>
 
     <section id="home" class="tab-content">
       <h2>Home Page</h2>
@@ -55,31 +55,83 @@
     </section>
 
     <section id="about" class="tab-content">
-      <h2>About</h2>
+      <h2>About The Developers</h2>
+      <div class="twoByTwo">
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img src="/imgs/abbi.jpg" class="circularImage" id="abbi">
+              <h3>Abigail White | Alien</h3>
+            </div>
+            <div class="back">
+              <img src="/imgs/hobbes.jpg" class="circularImage dogImage" id="abbiDog">
+              <h3>Hobbes | Maltese Mix</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img src="" class="circularImage" id="robert">
+              <h3>Robert Hatfield | Human Being</h3>
+            </div>
+            <div class="back">
+              <img src="/imgs/herley.jpg" class="circularImage dogImage" id="robertDog">
+              <h3>Robert's Dream Dog | Beagle</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img src="/imgs/kay.jpg" class="circularImage" id="kay">
+              <h3>Kaylee Alvarado | Human Being</h3>
+              <p>Originally from Issaquah, WA, Kaylee was first introduced to coding during her freshman year of college. She ultimately decided that a four-year university wasn't for her, so she signed up for a JavaScript 101 course at Code Fellows and hasn't looked back since. Once she finishes her education, she hopes to land a job as a junior full-stack JS developer in San Francisco.</p>
+            </div>
+            <div class="back">
+              <img src="/imgs/joejoe.jpg" class="circularImage dogImage" id="kayDog">
+              <h3>Joe-Joe | Bichon Frise</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img src="/imgs/teddy.jpg" class="circularImage" id="teddy">
+              <h3>David Teddy | Human Being</h3>
+              <p>David Teddy live a life of adventure through the military and was cut short due to having Crohns disease. After living the amazing life of a military person, decided to pursue a life as a Toyota Technician/ Master Technician and found that there was just not enough jobs, nor enough money to be made. After finding out that his soon to be wife was pregnant, Teddy decided to follow a course that he thought would be too difficult for him to do. His daughter decided she wanted to come 3 months early and he knew he needed to decided that computers and web design was the life for him.  After hearing about Code Fellows from the radio and the internet decided to do research and found that he was able to do something that he loved. Teddy is currently going through 301 and hopefully completing 401 JavaScript to be a full-stack developer to provide an amazing life for his daughter Harper and future wife Stacie.</p>
+            </div>
+            <div class="back">
+              <img src="/imgs/herley.jpg" class="circularImage dogImage" id="teddyDog">
+              <h3>Herley | Dalmation Mix</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2017 What'sPup! Group</p>
+    <img src="/images/logo/Logo-paw.png" class="logo-small"/>
+  </footer>
 
-    <footer>
-      <p>&copy; 2017 What'sPup! Group</p>
-      <img src="/images/logo/Logo-paw.png" class="logo-small"/>
-    </footer>
+  <!-- script tags  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="/vendor/scripts/page.js"></script>
 
-    <!-- script tags  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="/vendor/scripts/page.js"></script>
+  <script src="/scripts/model/results.js"></script>
 
-    <script src="/scripts/model/results.js"></script>
-
-    <script src="/scripts/view/aboutView.js"></script>
-    <script src="/scripts/view/homeView.js"></script>
-    <script src="/scripts/view/resultsView.js"></script>
+  <script src="/scripts/view/aboutView.js"></script>
+  <script src="/scripts/view/homeView.js"></script>
+  <script src="/scripts/view/resultsView.js"></script>
 
 
-    <script src="/scripts/controller/aboutController.js"></script>
-    <script src="/scripts/controller/homeController.js"></script>
-    <script src="/scripts/controller/resultsController.js"></script>
+  <script src="/scripts/controller/aboutController.js"></script>
+  <script src="/scripts/controller/homeController.js"></script>
+  <script src="/scripts/controller/resultsController.js"></script>
 
-    <script src="/scripts/controller/routes.js"></script>
+  <script src="/scripts/controller/routes.js"></script>
 
-  </body>
+</body>
 </html>
