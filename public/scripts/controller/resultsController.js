@@ -6,11 +6,12 @@ const resultsController = {};
 
 resultsController.init = function() {
   $('.tab-content').hide();
+  $('#form-home').show();
   $('#results').show();
 }
 
 resultsController.setZipCode = function() {
-  let userZip = $('#homeInput').val();
+  let userZip = $('#zipInput').val();
   // return userZip;
   results.getEvents(userZip, initMap);
 }
