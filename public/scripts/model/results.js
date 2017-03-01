@@ -13,6 +13,7 @@
     .then(data => results.all = data.results, err => console.error(err))
     .then(function() {
       results.locations = results.all.map(getLocation);
+      callback();
     })
   };
 
@@ -30,28 +31,5 @@
     }
   }
 
-  function initMap() {
-    let codeFellows = {
-      lat:  47.618217,
-      lng: -122.3540207
-    };
-    let map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: codeFellows
-    });
-    let marker = new google.maps.Marker({
-      position: codeFellows,
-      map: map
-    });
-    let marker2 = new google.maps.Marker({
-      position: {
-        lat: 47.6210848,
-        lng: -122.352722
-      },
-      map: map
-    });
-  }
-
   module.results = results;
-  module.initMap = initMap;
 })(window);
