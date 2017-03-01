@@ -166,17 +166,19 @@
     let map = new google.maps.Map(mapElement, mapOptions);
 
     let infoWindow = new google.maps.InfoWindow(), marker;
-    results.locations.forEach(function(location) {
 
-    let icon = {
-      url: "images/paw.png", // url
-      scaledSize: new google.maps.Size(25, 25), // scaled size
-      origin: new google.maps.Point(0,0), // origin
-      anchor: new google.maps.Point(0, 0) // anchor
-    };
+    results.locations.forEach(function(location) {
+      let icon = {
+        url: "images/paw.png", // url
+        scaledSize: new google.maps.Size(25, 25), // scaled size
+        origin: new google.maps.Point(0,0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
 
       let position = new google.maps.LatLng(location[0], location[1]);
+
       bounds.extend(position);
+
       marker = new google.maps.Marker({
         position: position,
         map: map,
@@ -186,17 +188,15 @@
 
       google.maps.event.addListener(marker, 'click', function() {
         console.log('inside addlistener', marker);
-      }
-    );
-
-      map.fitBounds(bounds);
-
-      let boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(14);
-        google.maps.event.removeListener(boundsListener);
       });
+
+      // let boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        // this.setZoom(10);
+      //   google.maps.event.removeListener(boundsListener);
+      // });
     });
 
+    map.fitBounds(bounds);
   }
 
 module.resultsView = resultsView;
