@@ -16,6 +16,7 @@ console.log('homeView');
   $('#form-home > button').on('click', function() {
     console.log($('#zipInput').val());
     resultsController.setZipCode();
+    resultsController.init();
   })
 
 module.homeView = homeView;
