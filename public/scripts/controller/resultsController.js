@@ -11,7 +11,7 @@ resultsController.init = function() {
 
 resultsController.setZipCode = function() {
   let userZip = $('#homeInput').val();
-  return userZip;
+  // return userZip;
   results.getEvents(userZip);
 }
 
