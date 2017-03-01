@@ -12,7 +12,7 @@
   })
 
   $('#form-results > button').on('click', function() {
-    console.log($('#homeInput').val());
+    $('#message').text(`We found ${results.all.length} results in your area.`);
     resultsController.setZipCode();
   })
 

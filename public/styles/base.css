@@ -24,21 +24,39 @@ hr {
   width: 80%;
 }
 
+form {
+  margin: 20px 10px;
+}
+
 h1 {
   color: #F2473F;
 }
 
 h2 {
   clear: both;
+  font-size: 40px;
+  margin: 10px;
+}
+
+button {
+  margin-left: 5px;
+  font-size: 15px;
 }
 
 ul {
   list-style:none;
-  padding-left:0;
+  padding-left: 0px;
+  margin: 10px;
+}
+
+li {
+  font-size: 20px;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.5em;
+  width: 320px;
+  margin: 0 auto;
 }
 
 a, a:link {
@@ -64,5 +82,5 @@ i {
 }
 
 footer {
-  margin: 0 auto;
+  margin: 10px auto;
 }

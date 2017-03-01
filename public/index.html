@@ -42,11 +42,11 @@
     </header>
 
     <section id="home" class="tab-content">
-      <h2>Home Page</h2>
-      <p>Description</p>
+      <h2>Welcome to MeetPup!</h2>
+      <p>Have you ever wondered what local pup groups are out there? We've got the answer! Enter your zip code below to check out what dog meetups are in your community.</p>
       <form id="form-home">
-        <h3>Please Enter Zip Code</h3>
-        <input id="homeInput" type="numbers" name="postal-code" />
+        <h3 class="zipH3">Please Enter Zip Code:</h3>
+        <input class="input" type="numbers" name="postal-code" />
         <button id="homeSubmitButton" type="submit">Fetch!</button>
       </form>
     </section>
@@ -54,12 +54,13 @@
     <section id="results" class="tab-content">
       <h2>Results</h2>
       <form id="form-results">
-        <h3>Please Enter Zip Code</h3>
-        <input id="resultsInput" type="numbers" name="zip-code" />
+        <h3 class="zipH3">Please Enter Zip Code:</h3>
+        <input class="input" type="numbers" name="zip-code" />
         <button id="resultsSubmitButton" type="submit">Fetch!</button>
       </form>
+<p id="message"></p>
+
       <div id="map"><p>Google Map Div</p></div>
-      <!-- <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyAioms9LDyfCohvTY_yx62j2O2q0WhqFCw&center=47.618217,-122.3540207&zoom=10" width="600" height="450" frameborder="0" style="border=0"></iframe> -->
     </section>
 
     <section id="about" class="tab-content">
@@ -69,7 +70,8 @@
           <div class="flipper">
             <div class="front">
               <img src="/imgs/abbi.jpg" class="circularImage" id="abbi">
-              <h3>Abigail White | Alien</h3>
+              <h3 class="devName">Abigail White | Alien</h3>
+              <p class="bio">Abigail White was born on March 26, 1985, in London, England. She made her film debut at the age of 9 in A Village Affair (1994). Her first major part came in Star Wars: Episode 1-The Phantom Menace and she then became well-known for her performance as tomboy footballer Juliette "Jules" Paxton in Bend It Like Beckham. Her later films include Atonement, Pirates of the Caribbean, A Dangerous Method and Anna Karenina. She has also earned Oscar nominations for her roles in Pride & Prejudice and The Imitation Game.</p>
             </div>
             <div class="back">
               <img src="/imgs/hobbes.jpg" class="circularImage dogImage" id="abbiDog">
@@ -81,11 +83,12 @@
           <div class="flipper">
             <div class="front">
               <img src="" class="circularImage" id="robert">
-              <h3>Robert Hatfield | Human Being</h3>
+              <h3 class="devName">Robert Hatfield | Human Being</h3>
+              <p class="bio"></p>
             </div>
             <div class="back">
-              <img src="/imgs/herley.jpg" class="circularImage dogImage" id="robertDog">
-              <h3>Robert's Dream Dog | Beagle</h3>
+              <img src="/imgs/peanut.jpg" class="circularImage dogImage" id="robertDog">
+              <h3>Peanut | Dachshund</h3>
             </div>
           </div>
         </div>
@@ -93,8 +96,8 @@
           <div class="flipper">
             <div class="front">
               <img src="/imgs/kay.jpg" class="circularImage" id="kay">
-              <h3>Kaylee Alvarado | Human Being</h3>
-              <p>Originally from Issaquah, WA, Kaylee was first introduced to coding during her freshman year of college. She ultimately decided that a four-year university wasn't for her, so she signed up for a JavaScript 101 course at Code Fellows and hasn't looked back since. Once she finishes her education, she hopes to land a job as a junior full-stack JS developer in San Francisco.</p>
+              <h3 class="devName">Kaylee Alvarado | Human Being</h3>
+              <p class="bio">Originally from Issaquah, WA, Kaylee was first introduced to coding during her freshman year of college. She ultimately decided that a four-year university wasn't for her, so she signed up for a JavaScript 101 course at Code Fellows and hasn't looked back since. Once she finishes her education, she hopes to land a job as a junior full-stack JS developer in San Francisco.</p>
             </div>
             <div class="back">
               <img src="/imgs/joejoe.jpg" class="circularImage dogImage" id="kayDog">
@@ -106,8 +109,8 @@
           <div class="flipper">
             <div class="front">
               <img src="/imgs/teddy.jpg" class="circularImage" id="teddy">
-              <h3>David Teddy | Human Being</h3>
-              <p>David Teddy live a life of adventure through the military and was cut short due to having Crohns disease. After living the amazing life of a military person, decided to pursue a life as a Toyota Technician/ Master Technician and found that there was just not enough jobs, nor enough money to be made. After finding out that his soon to be wife was pregnant, Teddy decided to follow a course that he thought would be too difficult for him to do. His daughter decided she wanted to come 3 months early and he knew he needed to decided that computers and web design was the life for him.  After hearing about Code Fellows from the radio and the internet decided to do research and found that he was able to do something that he loved. Teddy is currently going through 301 and hopefully completing 401 JavaScript to be a full-stack developer to provide an amazing life for his daughter Harper and future wife Stacie.</p>
+              <h3 class="devName">David Teddy | Human Being</h3>
+              <p class="bio">David Teddy was a military man who loved the life until tragically got medically retired. He realized after not making enough to support his family he needed a life change and always loved coding and decided to become a hacker. After doing a ton of research decided to become part of the Code Fellows family and realized he loved the life of coding.</p>
             </div>
             <div class="back">
               <img src="/imgs/herley.jpg" class="circularImage dogImage" id="teddyDog">
