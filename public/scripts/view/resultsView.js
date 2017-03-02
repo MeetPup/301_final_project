@@ -189,13 +189,13 @@
         // title: `${location[0]}, ${location[1]}`
       });
 
-      google.maps.event.addListener(marker, 'click', function() {
+      google.maps.event.addListener(marker, 'click', (function(marker, index) {
         return function(){
-          infoWindow.setContent(infoWindowContent[index]);
+          infoWindow.setContent(results.infoWindowContent[index]);
           infoWindow.open(map, marker);
         }
-        console.log('inside addlistener', marker);
-      });
+        // console.log('inside addlistener', marker);
+      })(marker, index));
 
       // let boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
         // this.setZoom(10);
