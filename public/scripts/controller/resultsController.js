@@ -21,6 +21,7 @@ resultsController.setZipCode = function() {
     console.log(testValue);
     if (testValue) {
       // Valid ZIP, request events & load results view
+      results.setLocalStorage();
       results.getEvents(userZip, listResults, initMap);
       resultsController.init();
     } else {

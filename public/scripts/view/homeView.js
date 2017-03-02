@@ -9,21 +9,25 @@ console.log('homeView');
     e.preventDefault();
   })
 
-  results.localStorage = function() {
+  results.setLocalStorage = function() {
     let userZip = $('#zipInput').val();
     console.log('localStorage userZip', userZip);
+    localStorage.setItem('userZip', JSON.stringify(userZip));
+  };
+
+  results.checkLocalStorage = function() {
+    let userZip = $('#zipInput').val();
     if (localStorage.userZip) {
-      console.log('first part of if statement for localStorage');
+      console.log('check localStorage');
     } else {
-      console.log('storing data');
-        localStorage.setItem('userZip', JSON.stringify(userZip));
     };
   };
+
+results.checkLocalStorage();
 
   $('#form-home > button').on('click', function() {
     console.log($('#zipInput').val());
     resultsController.setZipCode();
-    results.localStorage();
   })
 
 module.homeView = homeView;
