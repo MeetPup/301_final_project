@@ -23,8 +23,7 @@ function proxyMeetup(request, response) {
 
 //Route to utilize our middleman proxy
 app.get('/meetup/*', proxyMeetup)
-app.get('*', (request, response) => response.sendFile('/index.html', {root: './public'}));
-
+app.get('*', (request, response) => response.sendFile('/404.html', {root: './public'}));
 
 app.listen(PORT, function() {
   console.log(`Listening on PORT ${PORT}`);
