@@ -4,6 +4,11 @@
   display: block;
 }
 
+#content {
+  font-family: 'Open Sans Condensed';
+  font-size: 17px;
+}
+
 .dev-name,  .dog-name{
   color: #A02422;
   font-size: 25px;
