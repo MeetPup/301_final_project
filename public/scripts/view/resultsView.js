@@ -170,7 +170,7 @@
 
     let infoWindow = new google.maps.InfoWindow(), marker;
 
-    results.locations.forEach(function(location) {
+    results.locations.forEach(function(location, index) {
       let icon = {
         url: "images/paw.png", // url
         scaledSize: new google.maps.Size(25, 25), // scaled size
@@ -189,9 +189,13 @@
         // title: `${location[0]}, ${location[1]}`
       });
 
-      google.maps.event.addListener(marker, 'click', function() {
-        console.log('inside addlistener', marker);
-      });
+      google.maps.event.addListener(marker, 'click', (function(marker, index) {
+        return function(){
+          infoWindow.setContent(results.infoWindowContent[index]);
+          infoWindow.open(map, marker);
+        }
+        // console.log('inside addlistener', marker);
+      })(marker, index));
 
       // let boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
         // this.setZoom(10);
