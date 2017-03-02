@@ -4,6 +4,12 @@
   display: block;
 }
 
+.dev-name,  .dog-name{
+  color: #A02422;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 #description {
   background-color:	#A02422;
   padding: 11px;
