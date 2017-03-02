@@ -15,8 +15,32 @@
       results.locations = results.all.map(getLocation);
       callback1();
       callback2();
+      results.setInfoContent(results.all);
     })
   };
+
+  results.setInfoContent = function(events) {
+    results.infoWindowContent = results.all.map(function(event) {
+      let address;
+      let name = event.name;
+      let desc = event.description;
+      let distance = event.distance;
+      let event_url = event.event_url;
+      let time = new Date(event.time);
+      if (event.venue) {
+        if (event.venue.address_1) {
+          address = `${event.venue.address_1}<br/>${event.venue.city}, ${event.venue.state} ${event.venue.zip}<br/>`;
+          console.log(address);
+        } else {
+          address = '';
+          console.log(address);
+        }
+      } else {
+        address = '';
+      }
+    return `<strong><a href=${event_url} target="_blank">${name}</a></strong><br/>${time} - ${distance} miles away<br/>${address}${desc}`;
+  });
+  }
 
   function getLocation(event) {
     if (event.venue) {
