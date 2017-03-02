@@ -21,15 +21,14 @@ resultsController.setZipCode = function() {
     console.log(testValue);
     if (testValue) {
       // Valid ZIP, request events & load results view
-      results.getEvents(userZip, listResults, initMap);
-      resultsController.init();
+      results.getEvents(userZip, renderMapResults);
+      page('/results');
     } else {
       //TODO: make a more user friendly response
       alert('Please enter a valid 5 digit ZIP code.');
       $('#zipInput').val('');
     }
 }
-
 }
 
 module.resultsController = resultsController;
