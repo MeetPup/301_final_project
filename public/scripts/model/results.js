@@ -19,18 +19,6 @@
     })
   };
 
-  results.localStorage = function() {
-    let userZip = $('#zipInput').val();
-    if (localStorage.userZip) {
-      console.log('first part of sif statement for localStorage');
-    } else {
-      console.log('storing data');
-      $.get(userZip).then(function(data) {
-        localStorage.setItem('Event data', JSON.stringify(data));
-      });
-    };
-  };
-
   results.setInfoContent = function(events) {
     results.infoWindowContent = results.all.map(function(event) {
       let name = event.name;
