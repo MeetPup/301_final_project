@@ -44,6 +44,8 @@
       <p id="description">Have you ever wondered what local pup groups are out there? We've got the answer! Enter your zip code below to check out what dog meetups are in your community.</p>
     </section>
 
+    <h2 id="results-title">Results</h2>
+
       <form id="form-home">
         <h3 class="zipH3">Please Enter Zip Code:</h3>
         <input id="zipInput" type="numbers" name="postal-code" />
@@ -51,11 +53,11 @@
       </form>
 
     <section id="results" class="tab-content">
-      <h2>Results</h2>
+      <!-- <h2>Results</h2> -->
       <p id="message"></p>
 
 
-      <div id="map"><p>Google Map Div</p></div>
+      <div id="map"></div>
     </section>
     <section id="about" class="tab-content">
       <h2>About The Developers</h2>
@@ -64,12 +66,13 @@
           <div class="flipper">
             <div class="front">
               <img src="/images/abbi.jpg" class="circularImage" id="abbi">
-              <h3 class="devName">Abigail White | Alien</h3>
+              <h3 class="dev-name">Abigail White | Person</h3>
               <p class="bio">Abigail White was born on March 26, 1985, in London, England. She made her film debut at the age of 9 in A Village Affair (1994). Her first major part came in Star Wars: Episode 1-The Phantom Menace and she then became well-known for her performance as tomboy footballer Juliette "Jules" Paxton in Bend It Like Beckham. Her later films include Atonement, Pirates of the Caribbean, A Dangerous Method and Anna Karenina. She has also earned Oscar nominations for her roles in Pride and Prejudice and The Imitation Game.</p>
             </div>
             <div class="back">
               <img src="/images/hobbes.jpg" class="circularImage dogImage" id="abbiDog">
-              <h3>Hobbes | Maltese Mix</h3>
+              <h3 class="dog-name">Hobbes | Maltese Mix</h3>
+              <p class="bio">Hobbes is a fun-loving Maltese who spreads his Joy at every opportunity. He has been in love exactly one time with a small pup named Lily, until her family tragically moved away. Although Hobbes has never fully recovered, he has found purpose in other meaningful pursuits, such as running around in circles. He loves belly rubs and tug-a-war and sweet potato for dinner (stovetop cooked, not microwaved). Someday he hopes to catch a squirrel or a cat or something, even though he's not sure what he would do with it if he did.</p>
             </div>
           </div>
         </div>
@@ -77,12 +80,12 @@
           <div class="flipper">
             <div class="front">
               <img src="" class="circularImage" id="robert">
-              <h3 class="devName">Robert Hatfield | Human Being</h3>
+              <h3 class="dev-name">Robert Hatfield | Human Being</h3>
               <p class="bio"></p>
             </div>
             <div class="back">
               <img src="/images/peanut.jpg" class="circularImage dogImage" id="robertDog">
-              <h3>Peanut | Dachshund</h3>
+              <h3 class="dog-name">Peanut | Dachshund</h3>
             </div>
           </div>
         </div>
@@ -90,12 +93,12 @@
           <div class="flipper">
             <div class="front">
               <img src="/images/kay.jpg" class="circularImage" id="kay">
-              <h3 class="devName">Kaylee Alvarado | Human Being</h3>
+              <h3 class="dev-name">Kaylee Alvarado | Human Being</h3>
               <p class="bio">Originally from Issaquah, WA, Kaylee was first introduced to coding during her freshman year of college. She ultimately decided that a four-year university wasn't for her, so she signed up for a JavaScript 101 course at Code Fellows and hasn't looked back since. Once she finishes her education, she hopes to land a job as a junior full-stack JS developer in San Francisco.</p>
             </div>
             <div class="back">
               <img src="/images/joejoe.jpg" class="circularImage dogImage" id="kayDog">
-              <h3>Joe-Joe | Bichon Frise</h3>
+              <h3 class="dog-name">Joe-Joe | Bichon Frise</h3>
               <p class="bio">Joe-Joe hails from Idaho, and <em>loves</em> being treated like the prince that he is. He'll go for the occasional walk, but he mostly enjoys lying around on the couch, getting his tummy rubbed, or eating roast chicken. Squirrels and men wearing hats are his only nemeses-- other than that, he's a lover, not a fighter.</p>
             </div>
           </div>
@@ -104,12 +107,12 @@
           <div class="flipper">
             <div class="front">
               <img src="/images/teddy.jpg" class="circularImage" id="teddy">
-              <h3 class="devName">David Teddy | Human Being</h3>
+              <h3 class="dev-name">David Teddy | Human Being</h3>
               <p class="bio">David Teddy was a military man who loved the life until tragically got medically retired. He realized after not making enough to support his family he needed a life change and always loved coding and decided to become a hacker. After doing a ton of research decided to become part of the Code Fellows family and realized he loved the life of coding.</p>
             </div>
             <div class="back">
               <img src="/images/herley.jpg" class="circularImage dogImage" id="teddyDog">
-              <h3>Herley | Dalmation Mix</h3>
+              <h3 class="dog-name">Herley | Dalmation Mix</h3>
             </div>
           </div>
         </div>
@@ -117,10 +120,7 @@
     </section>
   </div>
 
-  <!-- <img src="/images/dog-image.jpg" id="dog-image"/> -->
-
   <footer class="footer">
-    <!-- <img src="/images/logo/Logo-paw.png" class="logo-small"/> -->
     <img id="bone" src="/images/bone.gif"/>
     <p>&copy; 2017 What'sPup! Group</p>
 
@@ -141,8 +141,6 @@
   <script src="/scripts/view/resultsView.js"></script>
 
   <!-- controllers -->
-
-    <!-- &callback=initMap -->
   <script src="/scripts/controller/aboutController.js"></script>
   <script src="/scripts/controller/homeController.js"></script>
   <script src="/scripts/controller/resultsController.js"></script>
