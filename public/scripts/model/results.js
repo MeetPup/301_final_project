@@ -15,8 +15,40 @@
       results.locations = results.all.map(getLocation);
       callback1();
       callback2();
+      results.setInfoContent(results.all);
     })
   };
+
+  results.setInfoContent = function(events) {
+    results.infoWindowContent = results.all.map(function(event) {
+      let name = event.name;
+      let event_url = event.event_url;
+      let group = event.group.name;
+      let groupUrl = `https://www.meetup.com/${event.group.urlname}/`;
+      let time = new Date(event.time);
+      let distance = event.distance.toFixed(1);
+      let address = '';
+      let desc = event.description;
+      if (event.venue) {
+        let addressFields = ['address_1', 'city', 'state', 'zip'];
+        let resultAddress = [];
+        for (var i = 0; i < addressFields.length; i++) {
+          let checkedField = addressFields[i];
+          if (event.venue[checkedField]) {
+            resultAddress[checkedField] = event.venue[checkedField];
+          } else {
+            resultAddress[checkedField] = '';
+          }
+        };
+        address = `${resultAddress['address_1']}<br/>${resultAddress['city']}, ${resultAddress['state']} ${resultAddress['zip']}<br/>`;
+        console.log(address);
+      } else {
+        address = '';
+        console.log('No address...');
+      }
+    return `<strong><a href="${event_url}" target="_blank">${name}</a></strong><br/>Hosted by <a href="${groupUrl}" target="_blank">${group}</a><br/>${time} - ${distance} miles away<br/>${address}${desc}`;
+  });
+  }
 
   function getLocation(event) {
     if (event.venue) {
