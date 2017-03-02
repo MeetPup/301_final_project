@@ -22,8 +22,8 @@
       if (testValue) {
         // Valid ZIP, request events & load results view
         results.setLocalStorage();
-        results.getEvents(userZip, listResults, initMap);
-        resultsController.init();
+        results.getEvents(userZip, renderMapResults);
+        page('/results');
       } else {
         //TODO: make a more user friendly response
         alert('Please enter a valid 5 digit ZIP code.');
@@ -31,8 +31,6 @@
       }
     }
   }
-
-  resultsController.
 
   module.resultsController = resultsController;
 })(window);
