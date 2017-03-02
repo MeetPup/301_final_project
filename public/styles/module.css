@@ -4,6 +4,11 @@
   display: block;
 }
 
+#content {
+  font-family: 'Open Sans Condensed';
+  font-size: 17px;
+}
+
 .dev-name,  .dog-name{
   color: #A02422;
   font-size: 25px;
@@ -131,7 +136,7 @@ input {
 
   .flip-container, .front, .back {
     width: 320px;
-    height: 480px;
+    height: 500px;
   }
 
   /* flip speed goes here */
