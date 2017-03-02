@@ -170,7 +170,7 @@
 
     let infoWindow = new google.maps.InfoWindow(), marker;
 
-    results.locations.forEach(function(location) {
+    results.locations.forEach(function(location, index) {
       let icon = {
         url: "images/paw.png", // url
         scaledSize: new google.maps.Size(25, 25), // scaled size
@@ -190,6 +190,10 @@
       });
 
       google.maps.event.addListener(marker, 'click', function() {
+        return function(){
+          infoWindow.setContent(infoWindowContent[index]);
+          infoWindow.open(map, marker);
+        }
         console.log('inside addlistener', marker);
       });
 
