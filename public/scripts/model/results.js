@@ -45,7 +45,7 @@
         address = '';
         console.log('No address...');
       }
-    return `<strong><a href="${event_url}" target="_blank">${name}</a></strong><br/>Hosted by <a href="${groupUrl}" target="_blank">${group}</a><br/>${time} - ${distance} miles away<br/>${address}${desc}`;
+    return `<strong><a href="${event_url}" target="_blank">${name}</a></strong><br/>Hosted by <a href="${groupUrl}" target="_blank">${group}</a><br/><br/>${time} - ${distance} miles away<br/>${address}`;
   });
   }
 

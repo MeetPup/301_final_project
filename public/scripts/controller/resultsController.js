@@ -2,34 +2,35 @@
 
 (function(module) {
 
-const resultsController = {};
+  const resultsController = {};
 
-resultsController.init = function() {
-  $('.tab-content').hide();
-  $('#form-home').show();
-  $('#results').show();
-  $('#results-title').show();
-}
+  resultsController.init = function() {
+    $('.tab-content').hide();
+    $('#form-home').show();
+    $('#results').show();
+    $('#results-title').show();
+  }
 
-resultsController.setZipCode = function() {
-  let userZip = $('#zipInput').val();
-  // Validate ZIP code entered
-  let regZip = /^\d{5}$/;
-  zipTest(userZip)
-  function zipTest(zip) {
-    let testValue = regZip.test(zip);
-    console.log(testValue);
-    if (testValue) {
-      // Valid ZIP, request events & load results view
-      results.getEvents(userZip, renderMapResults);
-      page('/results');
-    } else {
-      //TODO: make a more user friendly response
-      alert('Please enter a valid 5 digit ZIP code.');
-      $('#zipInput').val('');
+  resultsController.setZipCode = function() {
+    let userZip = $('#zipInput').val();
+    // Validate ZIP code entered
+    let regZip = /^\d{5}$/;
+    zipTest(userZip)
+    function zipTest(zip) {
+      let testValue = regZip.test(zip);
+      console.log(testValue);
+      if (testValue) {
+        // Valid ZIP, request events & load results view
+        results.setLocalStorage();
+        results.getEvents(userZip, renderMapResults);
+        page('/results');
+      } else {
+        //TODO: make a more user friendly response
+        alert('Please enter a valid 5 digit ZIP code.');
+        $('#zipInput').val('');
+      }
     }
-}
-}
+  }
 
-module.resultsController = resultsController;
+  module.resultsController = resultsController;
 })(window);
