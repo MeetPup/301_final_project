@@ -6,15 +6,14 @@
   results.all = [];
   results.locations = [];
 
-  results.getEvents = function(userZip, callback1, callback2) {
+  results.getEvents = function(userZip, callback) {
     console.log('Requesting from Meetup.com...');
-    let urlZip = `meetup/2/open_events?zip=${userZip}&and_text=False&offset=0&format=json&limited_events=False&photo-host=public&page=20&radius=smart&category=26&desc=False&status=upcoming`;
+    let urlZip = `meetup/2/open_events?zip=${userZip}&and_text=False&offset=0&format=json&limited_events=False&photo-host=public&page=20&radius=20&category=26&desc=False&status=upcoming`;
     $.get(urlZip)
     .then(data => results.all = data.results, err => console.error(err))
     .then(function() {
       results.locations = results.all.map(getLocation);
-      callback1();
-      callback2();
+      callback();
       results.setInfoContent(results.all);
     })
   };
