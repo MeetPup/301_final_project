@@ -27,7 +27,7 @@
       let event_url = event.event_url;
       let group = event.group.name;
       let groupUrl = `https://www.meetup.com/${event.group.urlname}/`;
-      let time = new Date(event.time);
+      let time = `${moment(event.time).format("ddd, MMMM Do, YYYY, h:mm a")} (${moment(event.time).fromNow()})`;
       let distance = event.distance.toFixed(1);
       let address = '';
       let desc = event.description;
