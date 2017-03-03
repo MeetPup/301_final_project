@@ -64,7 +64,7 @@ input {
   display: none;
 }
 
-.back > h3 {
+.back > h3, .back > .dog-bio {
   display: none;
 }
 
