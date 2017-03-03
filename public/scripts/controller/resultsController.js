@@ -7,6 +7,7 @@
   resultsController.init = function() {
     $('.tab-content').hide();
     $('#form-home').show();
+    $('#form-div').show();
     $('#results').show();
     $('#results-title').show();
   }
@@ -21,12 +22,13 @@
       console.log(testValue);
       if (testValue) {
         // Valid ZIP, request events & load results view
+        $('#form-div').empty();
         results.setLocalStorage();
         results.getEvents(userZip, renderMapResults);
         page('/results');
       } else {
         //TODO: make a more user friendly response
-        alert('Please enter a valid 5 digit ZIP code.');
+        $('#form-div').empty().append(`"${userZip}" is not a valid zip code. Please Try again.`);
         $('#zipInput').val('');
       }
     }
