@@ -36,7 +36,7 @@ results.handleInvalidInput = function(invalidReason) {
   $('#zipInput').val('');
   if(invalidReason === 'badZip') {
       $('#zipInput').attr('placeholder', 'Not a zipcode...');
-      $('#message').text('');
+      $('#message').html('');
       $('#form-div').empty().append(`"${userZip}" is not a valid US zip code. Please try again.`);
     } else {
       console.log('No events...');
