@@ -12,9 +12,13 @@
     $.get(urlZip)
     .then(data => results.all = data.results, err => console.error(err))
     .then(function() {
-      results.locations = results.all.map(getLocation);
-      callback();
-      results.setInfoContent(results.all);
+      if (results.all.length > 0) {
+        results.locations = results.all.map(getLocation);
+        callback();
+        results.setInfoContent(results.all);
+      } else {
+        $('#message').html(`Sorry! No public events are planned within 20 miles of ${userZip}.<br/>Maybe you should plan one yourself on <a href="https://www.meetup.com" target="_blank">Meetup.com</a>!`)
+      }
     })
   };
 
