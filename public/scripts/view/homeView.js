@@ -31,11 +31,16 @@ results.checkLocalStorage();
     resultsController.setZipCode();
   })
 
-results.handleInvalidInput = function() {
+results.handleInvalidInput = function(invalidReason) {
   let userZip = $('#zipInput').val();
   $('#zipInput').val('');
-  $('#zipInput').attr('placeholder', 'Not a zipcode...');
-  $('#form-div').empty().append(`"${userZip}" is not a valid zip code. Please Try again.`);
+  if(invalidReason === 'badZip') {
+      $('#zipInput').attr('placeholder', 'Not a zipcode...');
+      $('#message').text('');
+      $('#form-div').empty().append(`"${userZip}" is not a valid US zip code. Please try again.`);
+    } else {
+      console.log('No events...');
+  }
 
 }
 module.homeView = homeView;
