@@ -20,7 +20,7 @@ button {
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  box-shadow: none;
+  border: 2px solid lightgrey;
   margin: 3px;
 
 }
@@ -76,21 +76,18 @@ p {
 
 a, a:link {
   text-decoration: none;
-  color: 	#A02422;
+  color: #A02422;
 }
 
-a:hover {
-  color: blue;
-}
 
 a:active {
   font-weight: bold;
 }
 
-a:visited {
+/*a:visited {
   color: 	#A02422;
 
-}
+}*/
 
 i {
   color: grey;

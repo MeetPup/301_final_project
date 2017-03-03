@@ -7,6 +7,7 @@
   resultsController.init = function() {
     $('.tab-content').hide();
     $('#form-home').show();
+    $('#form-div').show();
     $('#results').show();
     $('#results-title').show();
   }
@@ -20,6 +21,7 @@
       let testValue = regZip.test(zip);
       console.log(testValue);
       if (testValue) {
+
         // Check if ZIP entered is in US, center map
         $.ajax({
           url: `https://maps.googleapis.com/maps/api/geocode/json?&address=${userZip}`,
@@ -50,6 +52,7 @@
       } else {
         //TODO: make a more user friendly response
         results.handleInvalidInput();
+        $('#form-div').empty().append(`"${userZip}" is not a valid zip code. Please Try again.`);
       }
     }
   }
