@@ -4,6 +4,11 @@
   display: block;
 }
 
+.icons {
+  width: 25px;
+  height: 25px;
+}
+
 #form-div {
   font-size: 24px;
 }
@@ -68,8 +73,8 @@ input {
   display: none;
 }
 
-.bio {
-  font-size: 20px;
+.bio, .dog-bio {
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 640px) {
@@ -125,7 +130,7 @@ input {
 
   /*CSS animation/pic flip code (below) obtained from https://davidwalsh.name/css-flip*/
 
-  .back > h3 {
+  .back > h3, .back > .dog-bio {
     display: block;
   }
 
@@ -140,7 +145,7 @@ input {
 
   .flip-container, .front, .back {
     width: 320px;
-    height: 500px;
+    height: 470px;
   }
 
   /* flip speed goes here */
