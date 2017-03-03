@@ -50,7 +50,7 @@
   }
 
   function getLocation(event) {
-    if (event.venue) {
+    if (event.venue && event.venue.lat != 0) {
       let lat = event.venue.lat;
       let lon = event.venue.lon;
       let venue = true;
