@@ -10,6 +10,7 @@ homeController.init = function() {
   $('#results-title').hide();
   $('#home').show();
   $('#form-home').show();
+  $('#form-div').show();
 }
 
 module.homeController = homeController;

@@ -4,6 +4,15 @@
   display: block;
 }
 
+.icons {
+  width: 25px;
+  height: 25px;
+}
+
+#form-div {
+  font-size: 24px;
+}
+
 #content {
   font-family: 'Open Sans Condensed';
   font-size: 17px;
@@ -60,12 +69,12 @@ input {
   display: none;
 }
 
-.back > h3 {
+.back > h3, .back > .dog-bio {
   display: none;
 }
 
-.bio {
-  font-size: 20px;
+.bio, .dog-bio {
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 640px) {
@@ -121,7 +130,7 @@ input {
 
   /*CSS animation/pic flip code (below) obtained from https://davidwalsh.name/css-flip*/
 
-  .back > h3 {
+  .back > h3, .back > .dog-bio {
     display: block;
   }
 
@@ -136,7 +145,7 @@ input {
 
   .flip-container, .front, .back {
     width: 320px;
-    height: 500px;
+    height: 470px;
   }
 
   /* flip speed goes here */
@@ -166,5 +175,28 @@ input {
   /* back, initially hidden pane */
   .back {
     transform: rotateY(180deg);
+  }
+  nav a {
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 2px solid white;
+    font-size: 20px;
+    color: #4F4F4F;
+  }
+
+  nav a:hover {
+    border: 2px solid #4F4F4F;
+    border-radius: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+  }
+
+  button:hover {
+    border: 2px solid #A02422;
   }
 }

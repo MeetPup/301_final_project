@@ -26,9 +26,12 @@ console.log('homeView');
 results.checkLocalStorage();
 
   $('#form-home > button').on('click', function() {
-    console.log($('#zipInput').val());
     resultsController.setZipCode();
   })
 
+results.handleInvalidInput = function() {
+  $('#zipInput').val('');
+  $('#zipInput').attr('placeholder', 'Not a zipcode...');
+}
 module.homeView = homeView;
 })(window);
