@@ -14,7 +14,7 @@
 
   function renderMapResults(){
 
-    $('#message').text(`We found ${results.all.length} events in your area!`);
+    $('#message').html(`We found ${results.all.length} events in your area!`);
     initMap();
   }
 
