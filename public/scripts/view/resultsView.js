@@ -180,13 +180,14 @@
       let position = new google.maps.LatLng(location[0], location[1]);
 
       bounds.extend(position);
-
+      if(results.locations[index][0] != 0) {
       marker = new google.maps.Marker({
         position: position,
         map: map,
         icon: icon
         // title: `${location[0]}, ${location[1]}`
       });
+    };
 
       google.maps.event.addListener(marker, 'click', (function(marker, index) {
         return function(){

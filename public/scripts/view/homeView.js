@@ -19,8 +19,10 @@ console.log('homeView');
     let userZip = $('#zipInput').val();
     if (localStorage.userZip) {
       console.log('check localStorage');
-    } else {
-    };
+      let userZip = JSON.parse(localStorage.userZip);
+      $('#zipInput').val(userZip);
+      results.getEvents(userZip, renderMapResults);
+    }
   };
 
 results.checkLocalStorage();
@@ -30,8 +32,11 @@ results.checkLocalStorage();
   })
 
 results.handleInvalidInput = function() {
+  let userZip = $('#zipInput').val();
   $('#zipInput').val('');
   $('#zipInput').attr('placeholder', 'Not a zipcode...');
+  $('#form-div').empty().append(`"${userZip}" is not a valid zip code. Please Try again.`);
+
 }
 module.homeView = homeView;
 })(window);
