@@ -49,10 +49,10 @@
         results.setLocalStorage();
         results.getEvents(userZip, renderMapResults);
         page('/results');
+        $('#form-div').empty();
       } else {
         //TODO: make a more user friendly response
         results.handleInvalidInput();
-        $('#form-div').empty().append(`"${userZip}" is not a valid zip code. Please Try again.`);
       }
     }
   }

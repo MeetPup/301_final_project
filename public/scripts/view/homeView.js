@@ -30,8 +30,11 @@ results.checkLocalStorage();
   })
 
 results.handleInvalidInput = function() {
+  let userZip = $('#zipInput').val();
   $('#zipInput').val('');
   $('#zipInput').attr('placeholder', 'Not a zipcode...');
+  $('#form-div').empty().append(`"${userZip}" is not a valid zip code. Please Try again.`);
+
 }
 module.homeView = homeView;
 })(window);
