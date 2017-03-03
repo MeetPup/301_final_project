@@ -19,8 +19,10 @@ console.log('homeView');
     let userZip = $('#zipInput').val();
     if (localStorage.userZip) {
       console.log('check localStorage');
-    } else {
-    };
+      let userZip = JSON.parse(localStorage.userZip);
+      $('#zipInput').val(userZip);
+      results.getEvents(userZip, renderMapResults);
+    }
   };
 
 results.checkLocalStorage();
