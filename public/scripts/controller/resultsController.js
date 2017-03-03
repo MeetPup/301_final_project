@@ -15,7 +15,6 @@
   resultsController.setZipCode = function() {
     let userZip = $('#zipInput').val();
     // Validate ZIP code entered
-    console.log(userZip);
     zipTest(userZip);
 
     function zipTest(zip) {
@@ -30,7 +29,6 @@
           .then(
             data => {
               let shortName = data.results[0].address_components[4].short_name;
-              console.log('shortName is ', shortName);
               // True if response is in the US, otherwise false
               if (shortName === 'US') {
                 results.setLocalStorage();
