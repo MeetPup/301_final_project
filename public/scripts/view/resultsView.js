@@ -7,11 +7,6 @@
     e.preventDefault();
   })
 
-  // $('#form-results > button').on('click', function() {
-  //   resultsController.setZipCode();
-  // })
-  //NOTE: Not needed anymore because we only have one form (#form-home)...
-
   function renderMapResults(){
 
     $('#message').html(`We found ${results.all.length} events in your area!`);
@@ -185,7 +180,6 @@
         position: position,
         map: map,
         icon: icon
-        // title: `${location[0]}, ${location[1]}`
       });
     };
 
@@ -194,13 +188,8 @@
           infoWindow.setContent(results.infoWindowContent[index]);
           infoWindow.open(map, marker);
         }
-        // console.log('inside addlistener', marker);
       })(marker, index));
 
-      // let boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-      // this.setZoom(10);
-      //   google.maps.event.removeListener(boundsListener);
-      // });
     });
 
     map.fitBounds(bounds);
