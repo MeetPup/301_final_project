@@ -36,6 +36,7 @@
               // center map
               // feedback message
               console.log(`Not a US ZIP code; the closest match we found was ${zipAddress}.`);
+              return 'not found';
             }
           },
           err => {console.error(err)
@@ -48,8 +49,7 @@
         page('/results');
       } else {
         //TODO: make a more user friendly response
-        alert('Please enter a valid 5 digit ZIP code.');
-        $('#zipInput').val('');
+        results.handleInvalidInput();
       }
     }
   }
