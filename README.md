@@ -6,11 +6,11 @@ Have you ever wondered what local pup groups are out there? Perhaps a frolic in 
 
 The search results provide information regarding:
 * Title of the event
-* Link to the event MeetUp page
+* Link to the event Meetup page
 * Date and time of the event
 * Distance to the event
 * Name of organization group
-* Link to organizing group's MeetUp page
+* Link to organizing group's Meetup page
 
 ##User Stories
 
@@ -27,12 +27,13 @@ The search results provide information regarding:
 * As a developer, I want to have the API's work together to achieve a working site to give the user what they want.
 
 
-##Third Party Sources:
-Moment.js: https://momentjs.com/
-handlebars cdn:https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js
-page.js: https://github.com/visionmedia/page.js
-jquery CDN: https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-Google Fonts: https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300
-Wrights HQ: https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/
-Google Maps API: https://developers.google.com/maps/
-Meet-Up API: https://www.meetup.com/meetup_api/
+##Third Party Sources:  
+- **[Moment.js](https://momentjs.com/)** - User-friendly date formatting
+- **[Handlebars.js](http://handlebarsjs.com/)** - Semantic templates
+- **[Page.js](https://visionmedia.github.io/page.js/)** - Client-side routing
+- **[jQuery](http://jquery.com/)** - DOM manipulation, Ajax, and more
+- **[Google Fonts](https://fonts.google.com/)**
+  - Our site uses [Open Sans Condensed](https://fonts.google.com/specimen/Open+Sans+Condensed).
+- **[Google Maps API](https://developers.google.com/maps/)**  
+- **[Meetup.com API](https://www.meetup.com/meetup_api/)**
+- **[Wrights HQ](https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/)** - This was an _invaluable_ reference we found for placing multiple markers on a Google Map.
