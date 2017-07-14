@@ -1,4 +1,4 @@
-##Code Fellows 301 Final Project: MEETPUP
+## Code Fellows 301 Final Project: MEETPUP
 
 [![Link to MeetPup website ](https://raw.githubusercontent.com/MeetPup/301_final_project/master/public/images/logo/Logo-large.png)](http://meetpupevents.herokuapp.com/)
 
@@ -12,22 +12,22 @@ The search results provide information regarding:
 * Name of organization group
 * Link to organizing group's Meetup page
 
-##User Stories
+## User Stories
 
-###User:
+### User:
 * As a user, I want to locate pet-related events in my local area within a month of the query.
 * As a user, I want to click on the location of each event to retrieve relevant information about that event.
 * As a user, I want the views to be intuitive and easy to move between
 
 
-###Developer:
+### Developer:
 * As a developer, I want to have the user experience be nice so that they will visit my site again.
 * As a developer, I want to achieve MVP in an orderly fashion to accomplish my project by presentation day.
 * As a developer, I want to have a visual experience that is nice so that future employers are not worried about hiring me.
 * As a developer, I want to have the API's work together to achieve a working site to give the user what they want.
 
 
-##Third Party Sources:  
+## Third Party Sources:  
 - **[Moment.js](https://momentjs.com/)** - User-friendly date formatting
 - **[Handlebars.js](http://handlebarsjs.com/)** - Semantic templates
 - **[Page.js](https://visionmedia.github.io/page.js/)** - Client-side routing
